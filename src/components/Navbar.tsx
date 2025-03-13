@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
 
       {/* Category Menu Section */}
       <div
-        className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 max-w-6xl mx-5 transition-all duration-500 ease-in-out transform font-body text-sm md:text-base mb-0 ${
+        className={`flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 sm:gap-4 max-w-6xl mx-5 transition-all duration-500 ease-in-out transform font-body text-sm md:text-base mb-0 ${
           menuOpen
             ? "opacity-100 max-h-screen scale-100"
             : "opacity-0 max-h-0 scale-95"
@@ -90,29 +90,29 @@ const Navbar: React.FC = () => {
         {categories.map((category, index) => (
           <div
             key={index}
-            className="group relative bg-green-800 text-white font-body p-2 px-2 rounded-md flex justify-between items-center w-60 mb-2 md:mb-0"
+            className="group relative bg-green-800 text-white font-body p-3 px-2 rounded-md flex justify-between items-center"
           >
-            <span>{category}</span>
+            <span className="text-center">{category}</span>
             <HiOutlineChevronDown className="text-md" />
 
             {/* Dropdown container */}
             <div
-              className="absolute left-0 top-[22px] w-full hidden group-hover:block mt-2 bg-white text-black p-4 rounded-md shadow-lg transition-all duration-100 ease-out opacity-0 transform scale-95 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-4 z-50 overflow-y-auto max-h-40" // Added overflow and max height
+              className="absolute left-0 top-full w-full hidden group-hover:block mt-2 bg-white text-black p-4 rounded-md shadow-lg transition-all duration-100 ease-out opacity-0 transform scale-95 group-hover:opacity-100 group-hover:scale-100 z-50 overflow-y-auto max-h-40" // Changed to absolute on the bottom
               style={{
                 transitionDelay: `${index * 100}ms`, // Cascading effect based on index
               }}
             >
               <a href="#staple-munch">
-              <ul>
-                {categoryItems[index].map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="mb-3 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out hover:bg-green-800 hover:text-white cursor-pointer"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                <ul>
+                  {categoryItems[index].map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="mb-2 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out hover:bg-green-800 hover:text-white cursor-pointer"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </a>
             </div>
           </div>
