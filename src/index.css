@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 16px
+}
+/* Add this in your main CSS file */
+.slick-slide {
+  margin: 0 10px; /* Adjust spacing between slides */
+}
+
+.slick-slider {
+  padding: 20px; /* Add some padding around the carousel */
+}
+
+.navbar-background {
+  background-image: url('/background.png');
+  background-size: cover;
+  height: max-content;
+}
+

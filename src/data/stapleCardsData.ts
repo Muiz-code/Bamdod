@@ -1,0 +1,58 @@
+// stapleMunchData.ts
+export const stapleMunchItems = [
+  {
+    id: 1,
+    name: "Rice & Stew.",
+    description: "High-quality long grain rice.",
+    price: 10.0,
+    available: true,
+    imageUrl: "/rice.jpg",
+    ingredients: ["Rice.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'seasoning.'],
+  },
+  {
+    id: 2,
+    name: "Beans.",
+    description: "Organic white beans the best.",
+    price: 8.5,
+    available: true,
+    imageUrl: "/beans.jpg",
+    ingredients: ["Beans.", "Salt.", "Water.", 'seasoning.', 'Proteins of your choices.'],
+  },
+  {
+    id: 3,
+    name: "Spaghetti.",
+    description: "Italian pasta made from durum wheat.",
+    price: 12.0,
+    available: false,
+    imageUrl: "/spaghetti.jpg",
+    ingredients: ["Spaghetti.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'seasoning.'],
+  },
+  {
+    id: 4,
+    name: "Macaroni.",
+    description: "Italian Macaroni Pasta from wheat.",
+    price: 5.0,
+    available: true,
+    imageUrl: "/macaroni.jpg",
+    ingredients: ["Macaroni.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'seasoning.'],
+  },
+  {
+    id: 5,
+    name: "Noodles.",
+    description: "Nice Noodles that'll Nourish.",
+    price: 5.0,
+    available: true,
+    imageUrl: "/noodles.jpg",
+    ingredients: ["Noodles.", "Salt.", "Water.", 'seasoning.', 'Proteins of choice.'],
+  },
+  
+  {
+    id: 6,
+    name: "Yam and Egg Sauce.",
+    description: "Tasy Yam and Egg Sauce.",
+    price: 5.0,
+    available: true,
+    imageUrl: "/yam.jpg",
+    ingredients: ["Yam Tuber.", "Salt.", "Water.", "Eggs", 'seasoning.' ],
+  },
+];
