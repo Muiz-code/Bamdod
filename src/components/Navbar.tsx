@@ -9,7 +9,7 @@ import {
 import { categories, categoryItems } from "../data/categories"; // Updated import
 import Cart from "./Cart"; // Import the Cart component
 
-const searchTexts = ["Spices . . .", "Ingredients . . .", "Food-stuffs . . ."];
+const searchTexts = ["Staple Munch . . .", "Local Delicacies . . .", "Healthy Drinks . . .", "Student Options . . ."];
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 relative z-50 navbar-background">
+    <div id="back-to-top" className="bg-gray-100 relative z-50 navbar-background">
       {/* Navbar Section */}
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
         {categories.map((category, index) => (
           <div
             key={index}
-            className="group relative bg-green-800 text-white font-body p-3 px-2 rounded-md flex justify-between items-center"
+            className="group relative bg-green-800 cursor-pointer text-white font-body p-3 px-2 rounded-md flex justify-between items-center"
           >
             <span className="text-center">{category}</span>
             <HiOutlineChevronDown className="text-md" />

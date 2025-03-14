@@ -7,16 +7,16 @@ export const stapleMunchItems = [
     price: 10.0,
     available: true,
     imageUrl: "/rice.jpg",
-    ingredients: ["Rice.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'seasoning.'],
+    ingredients: ["Rice.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'Seasoning.'],
   },
   {
     id: 2,
     name: "Beans.",
-    description: "Organic white beans the best.",
+    description: "Organic brown beans, the best!.",
     price: 8.5,
     available: true,
     imageUrl: "/beans.jpg",
-    ingredients: ["Beans.", "Salt.", "Water.", 'seasoning.', 'Proteins of your choices.'],
+    ingredients: ["Beans.", "Salt.", "Water.", 'Seasoning.', 'Proteins of your choices.'],
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const stapleMunchItems = [
     price: 12.0,
     available: false,
     imageUrl: "/spaghetti.jpg",
-    ingredients: ["Spaghetti.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'seasoning.'],
+    ingredients: ["Spaghetti.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'Seasoning.'],
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const stapleMunchItems = [
     price: 5.0,
     available: true,
     imageUrl: "/macaroni.jpg",
-    ingredients: ["Macaroni.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'seasoning.'],
+    ingredients: ["Macaroni.", "Salt.", "Water.", 'Tomatoes and pepper (hand blended).', 'Proteins of your choice.', 'Oil.', 'Seasoning.'],
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ export const stapleMunchItems = [
     price: 5.0,
     available: true,
     imageUrl: "/noodles.jpg",
-    ingredients: ["Noodles.", "Salt.", "Water.", 'seasoning.', 'Proteins of choice.'],
+    ingredients: ["Noodles.", "Salt.", "Water.", 'Seasoning.', 'Proteins of choice.'],
   },
   
   {
@@ -53,6 +53,6 @@ export const stapleMunchItems = [
     price: 5.0,
     available: true,
     imageUrl: "/yam.jpg",
-    ingredients: ["Yam Tuber.", "Salt.", "Water.", "Eggs", 'seasoning.' ],
+    ingredients: ["Yam Tuber.", "Salt.", "Water.", "Eggs", 'Seasoning.' ],
   },
 ];

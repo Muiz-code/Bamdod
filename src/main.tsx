@@ -7,6 +7,8 @@ import DynamicBanner from './components/DynamicBanner.tsx'
 import StapleMunch from './components/StapleMunch.tsx'
 import InfoSection from './components/InfoSection.tsx'
 import LocalDelicacies from './components/LocalDelicacies.tsx'
+import Footer from './components/Footer.tsx'
+import FruitBlend from './components/FruitBlend.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -17,5 +19,7 @@ createRoot(document.getElementById('root')!).render(
     <DynamicBanner />
     <StapleMunch />
     <LocalDelicacies />
+    <FruitBlend />
+    <Footer />
   </StrictMode>,
 )

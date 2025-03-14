@@ -1,6 +1,5 @@
 // categories.ts
 export const categories: string[] = [
-  
   "Staple Munch", 
   "Local Delicacies", 
   "Healthy Drinks", 
