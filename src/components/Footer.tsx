@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               We simplify meal preparation by delivering fresh, high-quality ingredients to our <br /> customers, promoting healthy eating and convenience. It is price friendly and it <br /> saves stress.
             </p>
             <p className="mb-6 font-body">
-              Busy schedules, inconveniences in purchase locations, and limited access to fresh <br /> ingredients make it challenging for our target market to prepare meals. Our services <br /> addresses this need by providing convenient and affordable access to fresh ingredients <br /> with swift delivery.
+              Busy schedules, inconveniences in purchase locations, and limited access to fresh <br /> ingredients make it challenging for our target market to prepare meals.? Our services <br /> addresses this need by providing convenient and affordable access to fresh ingredients <br /> with swift delivery.
             </p>
           </div>
 
