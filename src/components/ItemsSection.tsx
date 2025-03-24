@@ -136,7 +136,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
               >
                 <div className="flex flex-col gap-5 text-white p-4 justify-content-between ">
                   <h3 className="text-xl font-title">{item.name}</h3>
-                  <p className="text-sm">{item.description}</p>
+                  <p className="text-sm font-title">{item.description}</p>
                   <div className="justify-start flex">
                     <ul className="list-disc list-inside mb-2">
                       {item.ingredients.map((ingredient, index) => (

@@ -1,5 +1,6 @@
 // import React from "react";
 import LandingPage from "../src/Pages/Landingpage";
+import Checkout from "./components/Checkout";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,7 +13,8 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} /> 
+        <Route path="/checkout" element={<Checkout />} />
         {/* <Route path="/about-us" element={<WhyUs />} />
         <Route
           path="/GoalsForHomelessness"

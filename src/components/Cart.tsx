@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HiOutlineX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 interface CartProps {
   onClose: () => void;
@@ -38,7 +39,7 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
   return (
     <div className="fixed top-0 right-0 w-80 h-full bg-white shadow-lg z-1000 p-4">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold">Your Cart</h2>
+        <h2 className="text-xl font-title">Your Cart.</h2>
         <HiOutlineX className="cursor-pointer text-2xl" onClick={onClose} />
       </div>
 
@@ -50,11 +51,11 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
               className="flex justify-between items-center border-b pb-2"
             >
               <div>
-                <p className="font-semibold">{item.name}</p>
-                <p className="text-gray-500">${item.price}</p>
+                <p className="font-body">{item.name}</p>
+                <p className="font-body text-gray-500">${item.price}</p>
               </div>
               <button
-                className="text-red-500 text-sm"
+                className="text-red-500 text-sm font-body"
                 onClick={() => handleRemoveItem(index)}
               >
                 Remove
@@ -62,7 +63,7 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
             </div>
           ))
         ) : (
-          <p>Your cart is currently empty.</p>
+          <p className="font-title">Your cart is currently empty.</p>
         )}
       </div>
 
@@ -74,18 +75,20 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
           </div>
 
           {/* Remove All Items Button */}
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2">
             <button
-              className="w-1/2 bg-red-600 text-white p-2 rounded cursor-pointer hover:bg-red-500 transition"
+              className="bg-red-600 font-body text-white p-3 rounded-lg cursor-pointer hover:bg-red-500 transition duration-300 shadow-md"
               onClick={handleClearCart}
             >
               Remove All
             </button>
 
             {/* Proceed to Checkout Button */}
-            <button className="w-1/2 bg-green-800 text-white p-2 rounded cursor-pointer">
-              Proceed to Checkout
-            </button>
+            <Link to="/checkout">
+              <button className="bg-green-800 font-body text-white p-3 rounded-lg cursor-pointer hover:bg-green-700 transition duration-300 shadow-md">
+                Proceed to Checkout🚀
+              </button>
+            </Link>
           </div>
         </div>
       )}
@@ -93,7 +96,7 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
       {/* Start Shopping Button */}
       {cartItems.length === 0 && (
         <button
-          className="mt-4 w-full bg-green-800 text-white p-2 rounded cursor-pointer"
+          className="mt-4 w-full font-body bg-green-800 text-white p-2 rounded cursor-pointer"
           onClick={onClose}
         >
           Start Shopping

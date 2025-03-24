@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSearchChange }) => {
               <img
                 src="/logo.png"
                 alt="Logo"
-                className="w-[40%] object-contain "
+                className="w-[35%] object-contain "
               />
             </a>
           </div>

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <img
             src="/logo.png"
             alt="Logo"
-            className="h-18 w-auto md:h-16 lg:h-30 object-contain" // Logo size
+            className="h-18 w-auto md:h-16 lg:h-15 ml-10 object-contain" // Logo size
           />
         </a>
       </div>
