@@ -1,25 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import Navbar from './components/Navbar.tsx'
-import DynamicBanner from './components/DynamicBanner.tsx'
-import StapleMunch from './components/StapleMunch.tsx'
-import InfoSection from './components/InfoSection.tsx'
-import LocalDelicacies from './components/LocalDelicacies.tsx'
-import Footer from './components/Footer.tsx'
-import FruitBlend from './components/FruitBlend.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App"; // Ensure the extension is .tsx for TypeScript
+import "./App.css";
+import "./index.css";
+// import "./MediaQuery.css";
 
+const rootElement = document.getElementById("root");
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-    <Navbar />
-    <InfoSection />
-    <DynamicBanner />
-    <StapleMunch />
-    <LocalDelicacies />
-    <FruitBlend />
-    <Footer />
-  </StrictMode>,
-)
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+} else {
+  console.error("Root element not found in HTML.");
+}

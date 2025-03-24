@@ -1,0 +1,265 @@
+{
+    "fruitBlendData": [
+      {
+        "id": 1,
+        "name": "Apple Fruit Blend.",
+        "description": "Crunch into the crisp taste of autumn! Our Apple Fruit Blend is a refreshing mix of juicy apples, perfect for any time of day.",
+        "price": 2.50,
+        "available": true,
+        "imageUrl": "/apple-juice.jpg",
+        "ingredients": [
+          "2-3 types of Apples.",
+          "1/2 cups of water[depending on the quantity.]",
+          "Ice cubes[Optional]."
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Orange Fruit Blend.",
+        "description": "Squeeze the sunshine into your day! Our Orange Fruit Blend is a vibrant and refreshing mix of juicy orange flavors.",
+        "price": 2.50,
+        "available": true,
+        "imageUrl": "/orange-juice.jpg",
+        "ingredients": [
+          "Oranges.",
+          "1/2 cups of water[depending on the quantity.]",
+          "Ice cubes[Optional]."
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Mango Fruit Blend.",
+        "description": "Dive into the tropical goodness of mangoes with our sweet and tangy Mango Fruit Blend.",
+        "price": 3.00,
+        "available": true,
+        "imageUrl": "/mango-juice.jpg",
+        "ingredients": [
+          "Mangoes.",
+          "1/2 cups of water.",
+          "Ice cubes[Optional]."
+        ]
+      }
+    ],
+    "localCardsData": [
+      {
+        "id": 1,
+        "name": "Amala & Vegetable Soup.",
+        "description": "Taste the tradition! Get authentic ingredients for Amala, Nigeria's dish.",
+        "price": 5.0,
+        "available": false,
+        "imageUrl": "/amala.jpg",
+        "ingredients": [
+          "Cassava / Yam Flour[Amala].",
+          "Vegetables.",
+          "Red oil.",
+          "Locust Beans[Iru].",
+          "Tomatoes & Pepper.",
+          "Proteins of your choice.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Semo & Egusi Soup.",
+        "description": "Taste the tradition! Get authentic ingredients for Semo, and Egusi soup.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/semo.jpg",
+        "ingredients": [
+          "Semolina Flour.",
+          "Vegetables.",
+          "Melon seed[Egusi]",
+          "Red oil.",
+          "Locust Beans[Iru].",
+          "Tomatoes & Pepper.",
+          "Proteins of your choice.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Semo & Vegetable Soup.",
+        "description": "Savor the flavors of our Vegetable Soup, a vibrant blend of the freshest vegetables with semo.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/semo-vegetable.jpg",
+        "ingredients": [
+          "Semolina Flour.",
+          "Vegetables.",
+          "Melon seed[Egusi]",
+          "Red oil.",
+          "Locust Beans[Iru].",
+          "Tomatoes & Pepper.",
+          "Proteins of your choice.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Eba & Vegetable Soup.",
+        "description": "Warm your heart and belly! Our classic Eba and Vegetable Soup combo, crafted with tender love and care.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/eba.jpg",
+        "ingredients": [
+          "Cassava Flakes[Garri].",
+          "Vegetables.",
+          "Red oil.",
+          "Locust Beans[Iru].",
+          "Tomatoes & Pepper.",
+          "Proteins of your choice.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Eba & Egusi Soup.",
+        "description": "Warm your heart and belly! Our classic Eba and Egusi Soup combo.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/eba-egusi.jpg",
+        "ingredients": [
+          "Cassava Flakes[Garri].",
+          "Vegetables.",
+          "Melon seed[Egusi]",
+          "Red oil.",
+          "Locust Beans[Iru].",
+          "Tomatoes & Pepper.",
+          "Proteins of your choice.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Amala & Egusi Soup.",
+        "description": "Warm your heart and belly! Our classic Amala and Egusi Soup combo.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/amala-egusi.jpg",
+        "ingredients": [
+          "Cassava / Yam Flour[Amala].",
+          "Vegetables.",
+          "Melon seed[Egusi]",
+          "Red oil.",
+          "Locust Beans[Iru].",
+          "Tomatoes & Pepper.",
+          "Proteins of your choice.",
+          "Seasoning."
+        ]
+      }
+    ],
+    "stapleMunchItems": [
+      {
+        "id": 1,
+        "name": "Rice & Stew.",
+        "description": "High-quality long grain rice.",
+        "price": 10.0,
+        "available": true,
+        "imageUrl": "/rice.jpg",
+        "ingredients": [
+          "Rice.",
+          "Salt.",
+          "Water.",
+          "Tomatoes and pepper (hand blended).",
+          "Proteins of your choice.",
+          "Oil.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Beans.",
+        "description": "Organic brown beans, the best!.",
+        "price": 8.5,
+        "available": true,
+        "imageUrl": "/beans.jpg",
+        "ingredients": [
+          "Beans.",
+          "Salt.",
+          "Water.",
+          "Seasoning.",
+          "Proteins of your choice."
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Spaghetti.",
+        "description": "Italian pasta made from durum wheat.",
+        "price": 12.0,
+        "available": false,
+        "imageUrl": "/spaghetti.jpg",
+        "ingredients": [
+          "Spaghetti.",
+          "Salt.",
+          "Water.",
+          "Tomatoes and pepper (hand blended).",
+          "Proteins of your choice.",
+          "Oil.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Macaroni.",
+        "description": "Italian Macaroni Pasta from wheat.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/macaroni.jpg",
+        "ingredients": [
+          "Macaroni.",
+          "Salt.",
+          "Water.",
+          "Tomatoes and pepper (hand blended).",
+          "Proteins of your choice.",
+          "Oil.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Noodles.",
+        "description": "Nice Noodles that'll Nourish.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/noodles.jpg",
+        "ingredients": [
+          "Noodles.",
+          "Salt.",
+          "Water.",
+          "Seasoning.",
+          "Proteins of choice."
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Yam and Egg Sauce.",
+        "description": "Tasty Yam and Egg Sauce.",
+        "price": 5.0,
+        "available": true,
+        "imageUrl": "/yam.jpg",
+        "ingredients": [
+          "Yam Tuber.",
+          "Salt.",
+          "Water.",
+          "Eggs.",
+          "Seasoning."
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Jollof Rice.",
+        "description": "A vibrant and savory dish that's perfect for any occasion.",
+        "price": 7.5,
+        "available": true,
+        "imageUrl": "/jollof-rice.jpg",
+        "ingredients": [
+          "Rice.",
+          "Tomatoes and pepper (blended).",
+          "Seasoning.",
+          "Proteins of your choice.",
+          "Oil."
+        ]
+      }
+    ]
+  }
+  
