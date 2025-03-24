@@ -4,7 +4,6 @@ const DynamicBanner: React.FC = () => {
     "/carousel-image.avif",
     "/carousel-image2.avif",
     "/carousel-image3.avif",
-    "/carousel-image4.avif",
     "/carousel-image5.avif",
     "/carousel-image6.avif",
     "/carousel-image7.avif",

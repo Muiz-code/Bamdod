@@ -114,7 +114,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                   {item.description}
                 </p>
                 <p className="text-green-600 font-body text-lg">
-                  ${item.price.toFixed(2)}
+                ₦{item.price.toFixed(2)}
                 </p>
                 <p
                   className={`text-sm font-body ${
@@ -188,7 +188,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                   {item.description}
                 </p>
                 <p className="text-green-600 font-body text-lg">
-                  ${item.price.toFixed(2)}
+                ₦{item.price.toFixed(2)}
                 </p>
                 <p
                   className={`text-sm font-body ${
@@ -263,7 +263,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                 </p>
 
                 <p className="font-body text-green-600 text-lg">
-                  ${item.price}
+                ₦{item.price}
                 </p>
               </div>
 
