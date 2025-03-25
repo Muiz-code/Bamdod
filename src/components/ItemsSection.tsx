@@ -92,7 +92,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
           Staple Munch.
         </h2>
         <div className="cursor-pointer grid grid-cols-1 sm:grid-cols-3 sm:border-r-2 gap-6">
-          {filteredStapleMunch.map((item) => (
+          {filteredStapleMunch.map((item: CartItem) => (
             <div
               key={item.id}
               data-aos="zoom-in"
@@ -115,7 +115,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                   {item.description}
                 </p>
                 <p className="text-green-600 font-body text-lg">
-                ₦{item.price.toFixed(2)}
+                  ₦{item.price.toFixed(2)}
                 </p>
                 <p
                   className={`text-sm font-body ${
@@ -140,11 +140,13 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                   <p className="text-sm font-title">{item.description}</p>
                   <div className="justify-start flex">
                     <ul className="list-disc list-inside mb-2">
-                      {item.ingredients.map((ingredient, index) => (
-                        <li key={index} className="text-white font-body">
-                          {ingredient}
-                        </li>
-                      ))}
+                      {item.ingredients.map(
+                        (ingredient: string, index: number) => (
+                          <li key={index} className="text-white font-body">
+                            {ingredient}
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
 
@@ -166,7 +168,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
           Fruit Blends.
         </h2>
         <div className="cursor-pointer grid grid-cols-1 sm:grid-cols-3 sm:border-r-2 gap-6">
-          {filteredFruitBlend.map((item) => (
+          {filteredFruitBlend.map((item: CartItem) => (
             <div
               key={item.id}
               data-aos="zoom-in"
@@ -189,7 +191,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                   {item.description}
                 </p>
                 <p className="text-green-600 font-body text-lg">
-                ₦{item.price.toFixed(2)}
+                  ₦{item.price.toFixed(2)}
                 </p>
                 <p
                   className={`text-sm font-body ${
@@ -239,7 +241,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
           Local Delicacies.
         </h2>
         <div className="cursor-pointer grid grid-cols-1 sm:grid-cols-3 sm:border-r-2 gap-6">
-          {filteredLocalDelicacies.map((item) => (
+          {filteredLocalDelicacies.map((item: CartItem) => (
             <div
               key={item.id}
               data-aos="zoom-in"
@@ -264,7 +266,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                 </p>
 
                 <p className="font-body text-green-600 text-lg">
-                ₦{item.price}
+                  ₦{item.price}
                 </p>
               </div>
 
