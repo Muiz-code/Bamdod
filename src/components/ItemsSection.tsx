@@ -114,7 +114,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                   {item.description}
                 </p>
                 <p className="text-green-600 font-body text-lg">
-                  ${item.price.toFixed(2)}
+                ₦{item.price.toFixed(2)}
                 </p>
                 <p
                   className={`text-sm font-body ${
@@ -136,7 +136,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
               >
                 <div className="flex flex-col gap-5 text-white p-4 justify-content-between ">
                   <h3 className="text-xl font-title">{item.name}</h3>
-                  <p className="text-sm">{item.description}</p>
+                  <p className="text-sm font-title">{item.description}</p>
                   <div className="justify-start flex">
                     <ul className="list-disc list-inside mb-2">
                       {item.ingredients.map((ingredient, index) => (
@@ -188,7 +188,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                   {item.description}
                 </p>
                 <p className="text-green-600 font-body text-lg">
-                  ${item.price.toFixed(2)}
+                ₦{item.price.toFixed(2)}
                 </p>
                 <p
                   className={`text-sm font-body ${
@@ -263,7 +263,7 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                 </p>
 
                 <p className="font-body text-green-600 text-lg">
-                  ${item.price}
+                ₦{item.price}
                 </p>
               </div>
 

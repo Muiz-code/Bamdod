@@ -15,26 +15,26 @@
       },
       {
         "id": 2,
-        "name": "Orange Fruit Blend.",
-        "description": "Squeeze the sunshine into your day! Our Orange Fruit Blend is a vibrant and refreshing mix of juicy orange flavors.",
+        "name": "Pineapple Fruit Blend.",
+        "description": "Squeeze the sunshine into your day! Our Pineapple Fruit Blend is a vibrant and refreshing mix of juicy flavors.",
         "price": 2.50,
         "available": true,
-        "imageUrl": "/orange-juice.jpg",
+        "imageUrl": "/pineaple-juice.jpg",
         "ingredients": [
-          "Oranges.",
+          "Pineapple.",
           "1/2 cups of water[depending on the quantity.]",
           "Ice cubes[Optional]."
         ]
       },
       {
         "id": 3,
-        "name": "Mango Fruit Blend.",
-        "description": "Dive into the tropical goodness of mangoes with our sweet and tangy Mango Fruit Blend.",
+        "name": "Watermelon Fruit Blend.",
+        "description": "Dive into the tropical goodness of Watermelon with our sweet Fruit Blend.",
         "price": 3.00,
         "available": true,
-        "imageUrl": "/mango-juice.jpg",
+        "imageUrl": "/watermelon-juice.jpg",
         "ingredients": [
-          "Mangoes.",
+          "Watermelon.",
           "1/2 cups of water.",
           "Ice cubes[Optional]."
         ]
@@ -46,7 +46,7 @@
         "name": "Amala & Vegetable Soup.",
         "description": "Taste the tradition! Get authentic ingredients for Amala, Nigeria's dish.",
         "price": 5.0,
-        "available": false,
+        "available": true,
         "imageUrl": "/amala.jpg",
         "ingredients": [
           "Cassava / Yam Flour[Amala].",
@@ -153,7 +153,7 @@
         "id": 1,
         "name": "Rice & Stew.",
         "description": "High-quality long grain rice.",
-        "price": 10.0,
+        "price": 3000,
         "available": true,
         "imageUrl": "/rice.jpg",
         "ingredients": [
@@ -186,7 +186,7 @@
         "name": "Spaghetti.",
         "description": "Italian pasta made from durum wheat.",
         "price": 12.0,
-        "available": false,
+        "available": true,
         "imageUrl": "/spaghetti.jpg",
         "ingredients": [
           "Spaghetti.",
@@ -234,7 +234,7 @@
         "id": 6,
         "name": "Yam and Egg Sauce.",
         "description": "Tasty Yam and Egg Sauce.",
-        "price": 5.0,
+        "price": 4000,
         "available": true,
         "imageUrl": "/yam.jpg",
         "ingredients": [
@@ -243,21 +243,6 @@
           "Water.",
           "Eggs.",
           "Seasoning."
-        ]
-      },
-      {
-        "id": 7,
-        "name": "Jollof Rice.",
-        "description": "A vibrant and savory dish that's perfect for any occasion.",
-        "price": 7.5,
-        "available": true,
-        "imageUrl": "/jollof-rice.jpg",
-        "ingredients": [
-          "Rice.",
-          "Tomatoes and pepper (blended).",
-          "Seasoning.",
-          "Proteins of your choice.",
-          "Oil."
         ]
       }
     ]

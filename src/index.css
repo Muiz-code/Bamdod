@@ -13,6 +13,12 @@ html {
   font-weight: bold;
 }
 
+.font-header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .font-body {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
