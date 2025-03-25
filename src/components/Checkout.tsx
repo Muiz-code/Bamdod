@@ -1,117 +1,213 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  imageUrl: string;
+  quantity: number;
+}
 
 const CheckoutPage: React.FC = () => {
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [state, setState] = useState("");
+  const [country, setCountry] = useState("");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const cartWithQuantity = storedCart.map((item: CartItem) => ({
+      ...item,
+      quantity: item.quantity || 1,
+    }));
+    setCart(cartWithQuantity);
+  }, []);
+
+  // Function to update quantity
+  const updateQuantity = (id: number, amount: number) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id
+          ? { ...item, quantity: Math.max(1, item.quantity + amount) }
+          : item
+      )
+    );
+  };
+
+  // Function to remove an item from the cart
+  const removeItem = (id: number) => {
+    const updatedCart = cart.filter((item) => item.id !== id);
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
+  // Check if form is valid
+  const isFormValid = () => {
+    return email && firstName && lastName && address && city && country;
+  };
+
+  // Calculate total price
+  const totalPrice = cart.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+
+  // Handle order completion
+  const handleCompleteOrder = () => {
+    if (!isFormValid()) return;
+
+    const message = encodeURIComponent(
+      `Hello, I want to place an order:\n\n` +
+        cart
+          .map(
+            (item) =>
+              `- ${item.name} (x${item.quantity}): ₦${(
+                item.price * item.quantity
+              ).toFixed(2)}`
+          )
+          .join("\n") +
+        `\n\nTotal: ₦${totalPrice.toFixed(2)}\n\n` +
+        `Customer Details:\n` +
+        `Email: ${email}\n` +
+        `Name: ${firstName} ${lastName}\n` +
+        `Address: ${address}, ${city}, ${state}, ${postalCode}, ${country}`
+    );
+
+    const whatsappNumber = "2349038415909"; // Replace with your WhatsApp number
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    window.open(whatsappUrl, "_blank");
+
+    localStorage.removeItem("cart");
+    setCart([]);
+    navigate("/order-completed");
+  };
+
   return (
     <div className="flex flex-col md:flex-row p-4">
       {/* Left Side: Form */}
       <div className="w-full md:w-1/2 mb-4 md:mb-0">
-      <h1 className="font-header text-center text-green-600">CheckOut Page.</h1>
+        <h1 className="font-header text-center text-green-600">
+          CheckOut Page.
+        </h1>
+
         <h2 className="text-xl font-title mb-4">Contact.</h2>
         <input
           type="email"
           placeholder="Email"
-          className="w-full p-2 border font-body border-gray-300 focus:ring-2 focus:ring-green-600 outline-none rounded mb-2"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded mb-2"
         />
-        <label className="flex items-center font-body mb-2">
-          <input type="checkbox" className="mr-2 font-body" />
-          Email me with news and offers.
-        </label>
 
         <h2 className="text-xl font-title mt-4 mb-4">Delivery.</h2>
-        
-        {/* Country/Region Dropdown */}
-        <select className="w-full p-2 border border-gray-300 cursor-pointer rounded mb-2 focus:ring-2 focus:ring-green-600 outline-none">
-          <option className='font-body'>Country/Region</option>
-          <option className='font-body'>Nigeria</option>
-          <option className='font-body'>United States</option>
-          <option className='font-body'>United Kingdom</option>
-          <option className='font-body'>Ghana</option>
-          <option className='font-body'>India</option>
-          {/* Add more options as needed */}
-        </select>
-
-        {/* Input Fields */}
         <input
           type="text"
           placeholder="First Name"
-          className="w-full p-2 border border-gray-300 focus:ring-2 focus:ring-green-600 outline-none rounded mb-2 font-body"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded mb-2"
         />
         <input
           type="text"
           placeholder="Last Name"
-          className="w-full p-2 border border-gray-300 focus:ring-2 focus:ring-green-600 outline-none rounded mb-2 font-body"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded mb-2"
         />
         <input
           type="text"
           placeholder="Address"
-          className="w-full p-2 border border-gray-300 focus:ring-2 focus:ring-green-600 outline-none rounded mb-2 font-body"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded mb-2"
         />
         <input
           type="text"
           placeholder="City"
-          className="w-full p-2 border border-gray-300 focus:ring-2 focus:ring-green-600 outline-none rounded mb-2 font-body"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded mb-2"
         />
-        <input
-          type="text"
-          placeholder="Postal code (optional)"
-          className="w-full p-2 border border-gray-300 focus:ring-2 focus:ring-green-600 outline-none rounded mb-2 font-body"
-        />
-        <input
-          type="text"
-          placeholder="State (optional)"
-          className="w-full p-2 border border-gray-300 focus:ring-2 focus:ring-green-600 outline-none rounded mb-4 font-body"
-        />
+        <select
+          value={country}
+          onChange={(e) => setCountry(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded mb-2"
+        >
+          <option value="">Country/Region</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Ghana">Ghana</option>
+          <option value="India">India</option>
+        </select>
 
-        <h2 className="text-xl font-title mt-4 mb-4">Payments.</h2>
-        <div className="border border-gray-300 p-4 rounded mb-4">
-          <h3 className="font-semibold mb-2 font-body">Bank Transfer.</h3>
-          <p className="text-sm mb-2 font-body">
-            Use the Instant Transfer option to pay the total amount due to:
-          </p>
-          <p className="font-title">Account Name: S.E.S.LTD - WALLET CREDITS.</p>
-          <p className="font-title">Account Number: 015391258</p>
-          <p className="font-title">Bank: GTB</p>
-          <p className="text-sm mt-2 font-body">
-            Use your order number as reference and email us at{' '}
-            <a href="mailto:service@supermart.ng" className="text-blue-500">
-              bamdolod@gmail.com
-            </a>{' '}
-            with the transfer receipt.
-          </p>
-        </div>
-
-        <button className="bg-green-700 font-body cursor-pointer text-white p-2 rounded w-full mb-4">
+        <button
+          onClick={handleCompleteOrder}
+          disabled={!isFormValid()}
+          className={`p-2 rounded w-full mb-4  ${
+            isFormValid()
+              ? "bg-green-700 text-white cursor-pointer"
+              : "bg-gray-400 text-gray-700 cursor-not-allowed"
+          }`}
+        >
           Complete Order
         </button>
       </div>
 
-      {/* Right Side: Fixed Summary */}
+      {/* Right Side: Order Summary */}
       <div className="w-full md:w-1/3 bg-gray-100 p-4 rounded shadow md:fixed md:right-0 md:top-0 md:h-full">
-        <h2 className="text-xl font-title mb-4">Order Summary:-</h2>
-        <div className="flex justify-between mb-2">
-          <span className='font-body'>Ramadan Kitchen Bundle</span>
-          <span className='font-body'>₦35,000.00</span>
-        </div>
-        <div className="flex justify-between mb-2">
-          <span className='font-body'>Subtotal</span>
-          <span className='font-body'>₦35,000.00</span>
-        </div>
-        <div className="flex justify-between mb-2">
-          <span className='font-body'>Shipping</span>
-          <span className='font-body'>₦0.00</span>
-        </div>
-        <div className="flex justify-between font-bold mb-4">
-          <span className='font-body'>Total</span>
-          <span className='font-body'>₦35,000.00</span>
-        </div>
-        <button className="bg-green-700 font-body cursor-pointer text-white p-2 rounded w-full mb-4">
-          Apply
-        </button>
+        <h2 className="text-xl font-title mb-4">Order Summary:</h2>
 
-        <Link to='/'><p className="font-body bg-green-700 cursor-pointer text-white p-2 rounded text-center">
-          Back to Homepage👈🏻
-        </p>
+        {cart.length === 0 ? (
+          <p className="text-gray-500">Your cart is empty.</p>
+        ) : (
+          <>
+            {cart.map((item) => (
+              <div
+                key={item.id}
+                className="flex items-center justify-between mb-4"
+              >
+                <img
+                  src={item.imageUrl}
+                  alt={item.name}
+                  className="w-16 h-16 rounded"
+                />
+                <span className="font-body">{item.name}</span>
+                <span className="font-body font-semibold">
+                  ₦{(item.price * item.quantity).toFixed(2)}
+                </span>
+                <button
+                  onClick={() => removeItem(item.id)}
+                  className="bg-red-500 text-white px-2 py-1 rounded ml-2"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
+            <div className="flex justify-between mb-2">
+              <span className="font-body">Subtotal</span>
+              <span className="font-body">₦{totalPrice.toFixed(2)}</span>
+            </div>
+            <div className="flex justify-between font-bold mb-4">
+              <span className="font-body">Total</span>
+              <span className="font-body">₦{totalPrice.toFixed(2)}</span>
+            </div>
+          </>
+        )}
+
+        <Link to="/">
+          <p className="bg-green-700 text-white p-2 rounded text-center cursor-pointer">
+            Back to Homepage
+          </p>
         </Link>
       </div>
     </div>

@@ -84,10 +84,11 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
             </button>
 
             {/* Proceed to Checkout Button */}
-            <Link to="/checkout">
-              <button className="bg-green-800 font-body text-white p-3 rounded-lg cursor-pointer hover:bg-green-700 transition duration-300 shadow-md">
-                Proceed to Checkout🚀
-              </button>
+            <Link
+              to="/checkout"
+              className="flex justify-center bg-green-800 font-body text-white p-3 rounded-lg cursor-pointer hover:bg-green-700 transition duration-300 shadow-md"
+            >
+              Proceed to Checkout
             </Link>
           </div>
         </div>

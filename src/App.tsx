@@ -8,13 +8,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "aos/dist/aos.css";
+import OrderCompleted from "./components/OrderCompleted";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
-        <Route path="/" element={<LandingPage />} /> 
+        <Route path="/" element={<LandingPage />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-completed" element={<OrderCompleted />} />s
         {/* <Route path="/about-us" element={<WhyUs />} />
         <Route
           path="/GoalsForHomelessness"
