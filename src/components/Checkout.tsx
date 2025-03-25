@@ -16,8 +16,8 @@ const CheckoutPage: React.FC = () => {
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
-  const [postalCode, setPostalCode] = useState("");
-  const [state, setState] = useState("");
+  const [postalCode] = useState("");
+  const [state] = useState("");
   const [country, setCountry] = useState("");
 
   const navigate = useNavigate();
