@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSearchChange }) => {
               <img
                 src="/logo.png"
                 alt="Logo"
-                className="w-[40%] object-contain "
+                className="w-[40%] md:w-[20%] lg:w-[40%] object-contain "
               />
             </a>
           </div>
@@ -149,11 +149,11 @@ const Navbar: React.FC<NavbarProps> = ({ onSearchChange }) => {
                 <img
                   src="/logo.png"
                   alt="Logo"
-                  className="w-[40%] object-contain "
+                  className="w-[40%] md:w-[20%] lg:w-[40%] object-contain "
                 />
               </a>
               <div className="flex items-center space-x-4 md:space-x-8 text-green-700 text-xl font-body">
-                <button onClick={() => setSearchOpen(!searchOpen)}>
+                <button onClick={() => setSearch2Open(!search2Open)}>
                   <HiOutlineSearch className="cursor-pointer text-green-700 text-2xl sm:text-3xl" />
                 </button>
                 <HiOutlineUser className="cursor-pointer text-2xl sm:text-3xl" />
