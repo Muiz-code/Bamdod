@@ -32,15 +32,15 @@ const CheckoutPage: React.FC = () => {
   }, []);
 
   // Function to update quantity
-  const updateQuantity = (id: number, amount: number) => {
-    setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(1, item.quantity + amount) }
-          : item
-      )
-    );
-  };
+  // const updateQuantity = (id: number, amount: number) => {
+  //   setCart((prevCart) =>
+  //     prevCart.map((item) =>
+  //       item.id === id
+  //         ? { ...item, quantity: Math.max(1, item.quantity + amount) }
+  //         : item
+  //     )
+  //   );
+  // };
 
   // Function to remove an item from the cart
   const removeItem = (id: number) => {

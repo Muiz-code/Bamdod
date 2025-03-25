@@ -15,7 +15,7 @@ interface CartItem {
 }
 
 const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
-  const [cart, setCart] = useState<CartItem[]>([]);
+  const [, setCart] = useState<CartItem[]>([]);
   const [isMobile, setIsMobile] = useState(false); // Track if mobile view
   const [showDetails, setShowDetails] = useState<number | null>(null); // Track which item to show details for
 
