@@ -270,7 +270,6 @@ const ItemsSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
                 </p>
               </div>
 
-              {/* Overlay that appears with sliding effect */}
               <div
                 className={`z-10 absolute inset-0 bg-black bg-opacity-50 transition-all duration-1000 opacity-0 group-hover:opacity-100 ${
                   isMobile && showDetails === item.id ? "opacity-100" : ""
